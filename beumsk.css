@@ -1,0 +1,241 @@
+/* Fixalize CSS -> Personal mix of Normalize.css and Remedy.css */
+
+*, ::before, ::after { 
+  /* Use border-box by default, globally. */
+  box-sizing: border-box; 
+}
+
+html {
+  /* Correct the line height in all browsers. */
+  line-height: 1.5;
+  /* Prevent adjustments of font size after orientation changes in iOS. */
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  /* Remove the margin in all browsers. */
+  margin: 0;
+  /* forces body to take full window height */
+  min-height: 100vh;
+}
+
+
+main {
+  /* Render the `main` element consistently in IE. */
+  display: block;
+}
+
+/* Switch to rem units for headings */
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.17rem; }
+h4 { font-size: 1.00rem; }
+h5 { font-size: 0.83rem; }
+h6 { font-size: 0.67rem; }
+
+/* Keep h1 margins consistent, even when nested */
+h1 { margin: 0.67em 0; }
+
+hr {
+  /* Solid, thin horizontal rules */
+  border-style: solid;
+  border-width: 1px 0 0;
+  height: 0;
+  /* Remove Firefox `color: gray` */
+  color: inherit;
+  /* Show the overflow in Edge and IE. */
+  overflow: visible;
+}
+
+pre {
+  /* Correct the inheritance and scaling of font size in all browsers. */
+  font-family: monospace, monospace;
+  /* Correct the odd `em` font sizing in all browsers. */
+  font-size: 1em;
+  /* Overflow by default is bad */
+  white-space: pre-wrap;
+}
+
+a {
+  /* Remove the gray background on active links in IE 10. */
+  background-color: transparent;
+}
+
+abbr[title] {
+  /* Remove the bottom border in Chrome 57- */
+  border-bottom: none;
+  /* Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari. */
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+b, strong {
+  /* Add the correct font weight in Chrome, Edge, and Safari. */
+  font-weight: bolder;
+}
+
+code, kbd, samp {
+  /* Correct the inheritance and scaling of font size in all browsers. */
+  font-family: monospace, monospace; 
+  /* Correct the odd `em` font sizing in all browsers. */
+  font-size: 1em;
+}
+
+small {
+  /* Correct the small font size in all browsers. */
+  font-size: 80%;
+}
+
+sub, sup {
+  /* Prevent `sub` and `sup` elements from affecting the line height in all browsers. */
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  /* Block display is usually what we want; Remove strange space-below when inline; Responsive by default */
+  display: block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+img, svg, video, canvas {
+  /* Maintain intrinsic aspect ratios when `max-width` is applied (iframe, embed, and object have no intrinsic ratio, set height explicitly) */
+  height: auto;
+}
+
+img {
+  /* Remove the border on images inside links in IE 10. */
+  border-style: none;
+}
+
+svg {
+  /* Hide the overflow in IE 10 and earlier */
+  overflow: hidden;
+}
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  /* Default block display on HTML5 elements */
+  display: block;
+}
+
+button, input, optgroup, select, textarea {
+  /* Change the font styles in all browsers. */
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  /* Remove the margin in Firefox and Safari. */
+  margin: 0;
+}
+
+button, input { 
+  /* Show the overflow in IE & Edge */
+  overflow: visible;
+}
+
+button, select {
+  /* Remove the inheritance of text transform in Firefox, Edge & IE. */
+  text-transform: none;
+}
+
+button, [type="button"], [type="reset"], [type="submit"] {
+  /* Correct the inability to style clickable types in iOS and Safari. */
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner {
+  /* Remove the inner border and padding in Firefox. */
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring {
+  /* Restore the focus styles unset by the previous rule. */
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  /* Correct the padding in Firefox. */
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  /* Correct the text wrapping in Edge and IE. */
+  box-sizing: border-box;
+  display: table;
+  max-width: 100%;
+  white-space: normal;
+  /* Remove the padding so developers are not caught out when they zero out `fieldset` elements in all browsers. */
+  padding: 0;
+  /* Correct the color inheritance from `fieldset` elements in IE. */
+  color: inherit;
+}
+
+progress {
+  /* Add the correct vertical alignment in Chrome, Firefox, and Opera. */
+  vertical-align: baseline;
+}
+
+textarea {
+  /* Remove the default vertical scrollbar in IE 10+. */
+  overflow: auto;
+}
+
+[type="checkbox"], [type="radio"] {
+  /* Add the correct box sizing in IE 10. */
+  box-sizing: border-box;
+  /* Remove the padding in IE 10. */
+  padding: 0;
+}
+
+[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button {
+  /* Correct the cursor style of increment and decrement buttons in Chrome. */
+  height: auto;
+}
+
+[type="search"] {
+  /* Correct the odd appearance in Chrome and Safari. */
+  -webkit-appearance: textfield;
+  /* Correct the outline style in Safari. */
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-decoration {
+  /* Remove the inner padding in Chrome and Safari on macOS. */
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  /* Correct the inability to style clickable types in iOS and Safari. */
+  -webkit-appearance: button;
+  /* Change font properties to `inherit` in Safari. */
+  font: inherit;
+}
+
+details {
+  /* Add the correct display in Edge, IE 10+, and Firefox. */
+  display: block;
+}
+
+summary {
+  /* Add the correct display in all browsers. */
+  display: list-item;
+}
+
+template {
+  /* Add the correct display in IE 10+. */
+  display: none;
+}
+
+[hidden] {
+  /* Add the correct display in IE 10. */
+  display: none;
+}
