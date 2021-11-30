@@ -1,6 +1,6 @@
 /* Fixalize CSS -> Personal mix of Normalize.css and Remedy.css */
 
-*, ::before, ::after { 
+*, *::before, *::after { 
   /* Use border-box by default, globally. */
   box-sizing: border-box; 
 }
@@ -35,6 +35,11 @@ h6 { font-size: 0.67rem; }
 
 /* Keep h1 margins consistent, even when nested */
 h1 { margin: 0.67em 0; }
+
+/* Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
 
 hr {
   /* Solid, thin horizontal rules */
